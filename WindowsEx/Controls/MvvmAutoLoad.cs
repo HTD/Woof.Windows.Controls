@@ -9,6 +9,10 @@ namespace Woof.WindowsEx.Controls {
     /// </summary>
     public class MvvmAutoLoad : UserControl {
 
+        /// <summary>
+        /// Handles PropertyChanged event to detect when the control is shown for the first time to load its view-model.
+        /// </summary>
+        /// <param name="e">Event arguments.</param>
         protected override async void OnPropertyChanged(DependencyPropertyChangedEventArgs e) {
             base.OnPropertyChanged(e);
             if (e.Property == IsVisibleProperty) {
